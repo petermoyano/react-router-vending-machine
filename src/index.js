@@ -1,12 +1,14 @@
 import React from 'react';
 import './index.css';
 import App from './App';
+import BackButton from './components/HomeButton';
 import reportWebVitals from './reportWebVitals';
 import { render } from "react-dom";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Chocolate from './routes/Chocolate';
 import Cookie from './routes/Cookie';
 import Coke from './routes/Coke';
+
 
 const rootElement = document.getElementById("root");
 render(
@@ -16,6 +18,7 @@ render(
   <Route path="/chocolate" element={<Chocolate />} />
   <Route path="/cookie" element={<Cookie />} />
   <Route path="/coke" element={<Coke />} />
+  <Route path="/" element={<BackButton />} />
   </Routes>
   </BrowserRouter>, rootElement);
 
